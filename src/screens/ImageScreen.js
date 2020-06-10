@@ -8,8 +8,6 @@ const ImageScreen = () => {
       <ImageDetail title="Forest" />
       <ImageDetail title="Beach" />
       <ImageDetail title="Mountain" />
-      <ImageDetail title="City" />
-      <ImageDetail title="Library" />
     </View>
   );
 };
