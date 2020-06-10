@@ -1,6 +1,6 @@
 # Learning rn-hooks-starter
 
-Version: 0.0.4 - 08 Jun 2020
+Version: 0.0.5 - 10 Jun 2020
 
 ## Description
 
