@@ -1,8 +1,17 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
 
 const ColorCounter = (props) => {
-  return <View><Text>Hello Color Counter</Text></View>;
+  const onIncrease = () => {};
+  const onDecrease = () => {};
+
+  return (
+    <View>
+      <Text>{props.title}</Text>
+      <Button title={`Increase ${props.title}`} onPress={onIncrease} />
+      <Button title={`Decrease ${props.title}`} onPress={onDecrease} />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({});
