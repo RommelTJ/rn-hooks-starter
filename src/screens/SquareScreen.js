@@ -6,9 +6,9 @@ import ColorCounter from "../components/ColorCounter";
 const SquareScreen = () => {
   return (
     <View>
-      <ColorCounter title={"Red"} />
-      <ColorCounter title={"Green"} />
-      <ColorCounter title={"Blue"} />
+      <ColorCounter color={"Red"} />
+      <ColorCounter color={"Green"} />
+      <ColorCounter color={"Blue"} />
     </View>
   );
 };

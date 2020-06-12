@@ -7,9 +7,9 @@ const ColorCounter = (props) => {
 
   return (
     <View>
-      <Text>{props.title}</Text>
-      <Button title={`Increase ${props.title}`} onPress={onIncrease} />
-      <Button title={`Decrease ${props.title}`} onPress={onDecrease} />
+      <Text>{props.color}</Text>
+      <Button title={`Increase ${props.color}`} onPress={onIncrease} />
+      <Button title={`Decrease ${props.color}`} onPress={onDecrease} />
     </View>
   );
 };
