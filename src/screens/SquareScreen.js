@@ -10,23 +10,39 @@ const SquareScreen = () => {
   const [green, setGreen] = useState(0);
   const [blue, setBlue] = useState(0);
 
-  const onIncrease = (color) => {
-    if (color === "Red") setRed(red + COLOR_INCREMENT);
-    if (color === "Green") setGreen(green + COLOR_INCREMENT);
-    if (color === "Blue") setBlue(blue + COLOR_INCREMENT);
-  }
-
-  const onDecrease = (color) => {
-    if (color === "Red") setRed(red - COLOR_INCREMENT);
-    if (color === "Green") setGreen(green - COLOR_INCREMENT);
-    if (color === "Blue") setBlue(blue - COLOR_INCREMENT);
+  const setColor = (color, change) => {
+    // change === +15, -15
+    if (color === "Red") {
+      if (red + change > 255 || red + change < 0) return;
+      setRed(red + change);
+    }
+    if (color === "Green") {
+      if (green + change > 255 || green + change < 0) return;
+      setGreen(green + change);
+    }
+    if (color === "Blue") {
+      if (blue + change > 255 || blue + change < 0) return;
+      setBlue(blue + change);
+    }
   }
 
   return (
     <View>
-      <ColorCounter color={"Red"} onIncrease={() => onIncrease("Red")} onDecrease={() => onDecrease("Red")} />
-      <ColorCounter color={"Green"} onIncrease={() => onIncrease("Green")} onDecrease={() => onDecrease("Green")} />
-      <ColorCounter color={"Blue"} onIncrease={() => onIncrease("Blue")} onDecrease={() => onDecrease("Blue")} />
+      <ColorCounter
+        color={"Red"}
+        onIncrease={() => setColor("Red", COLOR_INCREMENT)}
+        onDecrease={() => setColor("Red", -1 * COLOR_INCREMENT)}
+      />
+      <ColorCounter
+        color={"Green"}
+        onIncrease={() => setColor("Green", COLOR_INCREMENT)}
+        onDecrease={() => setColor("Green", -1 * COLOR_INCREMENT)}
+      />
+      <ColorCounter
+        color={"Blue"}
+        onIncrease={() => setColor("Blue", COLOR_INCREMENT)}
+        onDecrease={() => setColor("Blue", -1 * COLOR_INCREMENT)}
+      />
       <View style={{ height: 150, width: 150, backgroundColor: `rgb(${red}, ${green}, ${blue})` }} />
     </View>
   );
