@@ -4,7 +4,13 @@ import { View, Text, StyleSheet, TextInput } from "react-native";
 const TextScreen = () => {
   return (
     <View>
-      <TextInput style={styles.input} autoCapitalize="none" autoCorrect={false} />
+      <TextInput
+        style={styles.input}
+        autoCapitalize="none"
+        autoCorrect={false}
+        value={"Hi there"}
+        onChangeText={() => {}}
+      />
       <Text>User Typed: </Text>
     </View>
   );
