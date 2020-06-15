@@ -15,22 +15,21 @@ const styles = StyleSheet.create({
   viewStyle: {
     borderWidth: 3,
     borderColor: "black",
-    height: 200
+    height: 200,
+    alignItems: "center"
   },
   textStyle1: {
     borderWidth: 3,
-    borderColor: "red",
-    flex: 4
+    borderColor: "red"
   },
   textStyle2: {
     borderWidth: 3,
     borderColor: "red",
-    flex: 4
+    alignSelf: "stretch"
   },
   textStyle3: {
     borderWidth: 3,
-    borderColor: "red",
-    flex: 2
+    borderColor: "red"
   }
 });
 
