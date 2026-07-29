@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "babel-preset-expo": "~9.5.0",
-    "@babel/core": "^7.0.0"
+    "@babel/core": "^7.29.6"
   },
   "private": true
 }
